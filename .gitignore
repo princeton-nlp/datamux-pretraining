@@ -1,0 +1,337 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+#wand
+wandb/
+checkpoints/
+checkpoints
+datasets/__init__.py
+datasets/arrow_dataset.py
+datasets/arrow_reader.py
+datasets/arrow_writer.py
+datasets/builder.py
+datasets/combine.py
+datasets/config.py
+datasets/data_files.py
+datasets/dataset_dict.py
+datasets/fingerprint.py
+datasets/info.py
+datasets/inspect.py
+datasets/iterable_dataset.py
+datasets/keyhash.py
+datasets/load.py
+datasets/metric.py
+datasets/naming.py
+datasets/py.typed
+datasets/search.py
+datasets/splits.py
+datasets/streaming.py
+datasets/table.py
+datasets/test.py
+datasets/commands/__init__.py
+datasets/commands/convert.py
+datasets/commands/datasets_cli.py
+datasets/commands/dummy_data.py
+datasets/commands/env.py
+datasets/commands/run_beam.py
+datasets/commands/test.py
+datasets/download/__init__.py
+datasets/download/download_config.py
+datasets/download/download_manager.py
+datasets/download/mock_download_manager.py
+datasets/download/streaming_download_manager.py
+datasets/features/__init__.py
+datasets/features/audio.py
+datasets/features/features.py
+datasets/features/image.py
+datasets/features/translation.py
+datasets/filesystems/__init__.py
+datasets/filesystems/compression.py
+datasets/filesystems/hffilesystem.py
+datasets/filesystems/s3filesystem.py
+datasets/formatting/__init__.py
+datasets/formatting/formatting.py
+datasets/formatting/jax_formatter.py
+datasets/formatting/tf_formatter.py
+datasets/formatting/torch_formatter.py
+datasets/formatting/dataset_wrappers/__init__.py
+datasets/formatting/dataset_wrappers/torch_iterable_dataset.py
+datasets/io/__init__.py
+datasets/io/abc.py
+datasets/io/csv.py
+datasets/io/json.py
+datasets/io/parquet.py
+datasets/io/text.py
+datasets/metrics/accuracy/accuracy.py
+datasets/metrics/accuracy/README.md
+datasets/metrics/bertscore/bertscore.py
+datasets/metrics/bertscore/README.md
+datasets/metrics/bleu/bleu.py
+datasets/metrics/bleu/README.md
+datasets/metrics/bleurt/bleurt.py
+datasets/metrics/cer/cer.py
+datasets/metrics/cer/README.md
+datasets/metrics/cer/test_cer.py
+datasets/metrics/chrf/chrf.py
+datasets/metrics/chrf/README.md
+datasets/metrics/code_eval/code_eval.py
+datasets/metrics/code_eval/execute.py
+datasets/metrics/code_eval/README.md
+datasets/metrics/comet/comet.py
+datasets/metrics/comet/README.md
+datasets/metrics/competition_math/competition_math.py
+datasets/metrics/competition_math/README.md
+datasets/metrics/coval/coval.py
+datasets/metrics/coval/README.md
+datasets/metrics/cuad/cuad.py
+datasets/metrics/cuad/evaluate.py
+datasets/metrics/cuad/README.md
+datasets/metrics/exact_match/exact_match.py
+datasets/metrics/exact_match/README.md
+datasets/metrics/f1/f1.py
+datasets/metrics/f1/README.md
+datasets/metrics/frugalscore/frugalscore.py
+datasets/metrics/frugalscore/README.md
+datasets/metrics/glue/glue.py
+datasets/metrics/glue/README.md
+datasets/metrics/google_bleu/google_bleu.py
+datasets/metrics/google_bleu/README.md
+datasets/metrics/indic_glue/indic_glue.py
+datasets/metrics/indic_glue/README.md
+datasets/metrics/mae/mae.py
+datasets/metrics/mae/README.md
+datasets/metrics/mahalanobis/mahalanobis.py
+datasets/metrics/mahalanobis/README.md
+datasets/metrics/matthews_correlation/matthews_correlation.py
+datasets/metrics/matthews_correlation/README.md
+datasets/metrics/mauve/mauve.py
+datasets/metrics/mauve/README.md
+datasets/metrics/mean_iou/mean_iou.py
+datasets/metrics/mean_iou/README.md
+datasets/metrics/meteor/meteor.py
+datasets/metrics/meteor/README.md
+datasets/metrics/mse/mse.py
+datasets/metrics/mse/README.md
+datasets/metrics/pearsonr/pearsonr.py
+datasets/metrics/pearsonr/README.md
+datasets/metrics/perplexity/perplexity.py
+datasets/metrics/perplexity/README.md
+datasets/metrics/precision/precision.py
+datasets/metrics/precision/README.md
+datasets/metrics/recall/README.md
+datasets/metrics/recall/recall.py
+datasets/metrics/roc_auc/README.md
+datasets/metrics/roc_auc/roc_auc.py
+datasets/metrics/rouge/README.md
+datasets/metrics/rouge/rouge.py
+datasets/metrics/sacrebleu/README.md
+datasets/metrics/sacrebleu/sacrebleu.py
+datasets/metrics/sari/README.md
+datasets/metrics/sari/sari.py
+datasets/metrics/seqeval/README.md
+datasets/metrics/seqeval/seqeval.py
+datasets/metrics/spearmanr/README.md
+datasets/metrics/spearmanr/spearmanr.py
+datasets/metrics/squad/evaluate.py
+datasets/metrics/squad/README.md
+datasets/metrics/squad/squad.py
+datasets/metrics/squad_v2/evaluate.py
+datasets/metrics/squad_v2/README.md
+datasets/metrics/squad_v2/squad_v2.py
+datasets/metrics/super_glue/README.md
+datasets/metrics/super_glue/record_evaluation.py
+datasets/metrics/super_glue/super_glue.py
+datasets/metrics/ter/README.md
+datasets/metrics/ter/ter.py
+datasets/metrics/wer/README.md
+datasets/metrics/wer/wer.py
+datasets/metrics/wiki_split/README.md
+datasets/metrics/wiki_split/wiki_split.py
+datasets/metrics/xnli/README.md
+datasets/metrics/xnli/xnli.py
+datasets/metrics/xtreme_s/README.md
+datasets/metrics/xtreme_s/xtreme_s.py
+datasets/packaged_modules/__init__.py
+datasets/packaged_modules/csv/__init__.py
+datasets/packaged_modules/csv/csv.py
+datasets/packaged_modules/imagefolder/__init__.py
+datasets/packaged_modules/imagefolder/imagefolder.py
+datasets/packaged_modules/json/__init__.py
+datasets/packaged_modules/json/json.py
+datasets/packaged_modules/pandas/__init__.py
+datasets/packaged_modules/pandas/pandas.py
+datasets/packaged_modules/parquet/__init__.py
+datasets/packaged_modules/parquet/parquet.py
+datasets/packaged_modules/text/__init__.py
+datasets/packaged_modules/text/text.py
+datasets/tasks/__init__.py
+datasets/tasks/automatic_speech_recognition.py
+datasets/tasks/base.py
+datasets/tasks/image_classification.py
+datasets/tasks/language_modeling.py
+datasets/tasks/question_answering.py
+datasets/tasks/summarization.py
+datasets/tasks/text_classification.py
+datasets/utils/__init__.py
+datasets/utils/_hf_hub_fixes.py
+datasets/utils/beam_utils.py
+datasets/utils/deprecation_utils.py
+datasets/utils/doc_utils.py
+datasets/utils/download_manager.py
+datasets/utils/extract.py
+datasets/utils/file_utils.py
+datasets/utils/filelock.py
+datasets/utils/info_utils.py
+datasets/utils/logging.py
+datasets/utils/metadata.py
+datasets/utils/patching.py
+datasets/utils/py_utils.py
+datasets/utils/readme.py
+datasets/utils/stratify.py
+datasets/utils/tf_utils.py
+datasets/utils/typing.py
+datasets/utils/version.py
+datasets/utils/resources/__init__.py
+datasets/utils/resources/creators.json
+datasets/utils/resources/languages.json
+datasets/utils/resources/licenses.json
+datasets/utils/resources/multilingualities.json
+datasets/utils/resources/readme_structure.yaml
+datasets/utils/resources/size_categories.json
+datasets/utils/resources/tasks.json
