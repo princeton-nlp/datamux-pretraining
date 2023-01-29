@@ -8,7 +8,7 @@
       * [Directory structure](#directory_structure)
       * [Pre-trained checkpoints](#pre-trained-checkpoints)
       * [Fine-tuning](#fine-tuned-checkpoints)
-      * [Training settings](#settings)
+      * [Baselines](#baselines)
    * [Reference](#reference)
    * [License](#license)
 ### Setup and Dependencies
@@ -18,7 +18,7 @@ Our code is implemented in PyTorch. To setup, do the following:
 1. Install [Python 3.6](https://www.python.org/downloads/release/python-365/)
 2. Get the source:
 ```
-git clone https://github.com/princeton-nlp/DataMUX.git mux_plms
+git clone https://github.com/princeton-nlp/datamux-pretraining.git mux_plms
 ```
 3. Install requirements into the `mux_plm` virtual environment, using [Anaconda](https://anaconda.org/anaconda/python):
 ```
@@ -29,7 +29,7 @@ conda env create -f env.yaml
 ### Usage
 
 #### Overview
-For sentence-level classification tasks, refer to `run_glue.py` and `run_glue.sh`. For token-level classification tasks, refer to `run_glue.py` and `run_glue.sh`. Refer to `finetune_driver.sh` for submitting batch jobs for different multiplexing, demultiplexing and model configurations for GLUE and Token tasks.
+For sentence-level classification tasks, refer to `run_glue.py` and `run_glue.sh`. For token-level classification tasks, refer to `run_ner.py` and `run_ner.sh`. Refer to `finetune_driver.sh` for submitting batch jobs for different multiplexing, demultiplexing and model configurations for GLUE and Token tasks.
 
 #### Directory structure
 
@@ -58,7 +58,7 @@ We release pre-trained checkpoints for MUX-BERT models for N= 2,5, and 10 with t
 
 The pre-trained checkpoints are listed on the Hugging Face [model hub](https://huggingface.co/princeton-nlp). We list our `MUX-BERT` checkpoints below. **For number of instances, select from {2, 5, 10}. For model size, select from {small, base, large}.**
 
-Model Id: `princeton-nlp/muxbert_<model-type>_gaussian_hadamard_index_pos_<num-instances>`
+Model ID (BERT): `princeton-nlp/muxbert_<model-type>_gaussian_hadamard_index_pos_<num-instances>`
 
 Pre-trained `BERT` baselines are available at:
 Model ID (BERT): `princeton-nlp/bert_<model-type>_1`
@@ -73,7 +73,7 @@ Model ID (ELECTRA): `princeton-nlp/electra_base_1`
 
 We also present pre-trained `MUX-BERT` models for our new contextual multiplexing module for the base configuration:
 
-Model ID (ELECTRA): `princeton-nlp/muxelectra_base_gaussian_attention_v2_index_pos_<num_instances>`
+Model ID: `princeton-nlp/muxbert_base_gaussian_attention_v2_index_pos_<num_instances>`
 
 #### Fine-tuning
 
@@ -102,7 +102,8 @@ We also release fine-tuned checkpoints for the four largest GLUE Tasks (MNLI, QN
 | QQP    | muxbert_base_qqp_gaussian_hadamard_index_pos_<num_instances> | princeton-nlp/muxbert_base_qqp_gaussian_hadamard_index_pos_<num_instances>|
 | SST2   | muxbert_base_sst2_gaussian_hadamard_index_pos_<num_instances> | princeton-nlp/muxbert_base_sst2_gaussian_hadamard_index_pos_<num_instances>|
 
-This command finetunes from a fine-tuned MUX-BERT (N=2) model trained on MNLI. The model is pretrained with the `gaussian_hadamard` multiplexing module and `rsa_demux` demultiplexing module.
+This command finetunes from a fine-tuned MUX-BERT (N=2) model trained on MNLI. The model is pretrained and fine-tuned with the `gaussian_hadamard` multiplexing module and `rsa_demux` demultiplexing module. To simply evaluate these fine-tuned models, get rid of the `do_train` flag.
+
 
 ```
 sh run_glue.sh \
@@ -121,8 +122,7 @@ sh run_glue.sh \
 Refer to `finetune_driver.sh` to launch multiple experiments at once for different GLUE and Token tasks.
 
 #### Baselines
-This command finetunes from a preMUX-BERT (N=2) model trained on MNLI. The model is pretrained with the `gaussian_hadamard` multiplexing module and `rsa_demux` demultiplexing module. To simply evaluate these fine-tuned models, get rid of the `do_train` flag.
-
+This command finetunes a pretrained BERT-base model on MNLI.
 ```
 sh run_glue.sh \
 -N 1 \
